@@ -361,10 +361,24 @@ thead tr:hover:last-child th:last-child:not(:first-child), tr:hover td:nth-last-
   opacity: 0 !important;
 }
 
+.vFileUpload .files .file {
+	padding-bottom: 1rem;
+}
+
 .dropzone-area {
 	position: relative;
 }
 
+.dropzone-area__dnd {
+	position: absolute;
+	top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    outline: 1px dashed currentColor;
+    outline-offset: 5px;
+    background: rgba(255, 255, 255, 0.6);
+}
 .q-uploader {
 	width:auto !important;
 }

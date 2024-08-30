@@ -41,7 +41,9 @@ window.dispatchEvent(new CustomEvent('vui-after-page-mounted', { detail : {vuiAp
 axios.interceptors.response.use(function(response) {
     return response;
 }, function(error) {
-    VUiPage.onAjaxError(error.response);
+    if (error.code !== "ERR_CANCELED") {
+        VUiPage.onAjaxError(error.response);
+    }
     return Promise.reject(error);
 })
 

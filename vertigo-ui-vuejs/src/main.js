@@ -13,6 +13,7 @@ import VMap from './components/VMap.vue'
 import VMapLayer from './components/VMapLayer.vue'
 import VTree from './components/VTree.vue'
 import VFileUpload from './components/VFileUpload.vue'
+import VFileUploadQuasar from './components/VFileUploadQuasar.vue'
 
 import VDashboardChart from './components/dashboard/VDashboardChart.vue'
 
@@ -52,6 +53,7 @@ var VertigoUi = {
         vueApp.component("v-map-layer", VMapLayer);
         vueApp.component("v-tree", VTree)
         vueApp.component("v-file-upload", VFileUpload);
+        vueApp.component("v-file-upload-quasar", VFileUploadQuasar);
         vueApp.component("v-dashboard-chart", VDashboardChart);
 
         // directives
