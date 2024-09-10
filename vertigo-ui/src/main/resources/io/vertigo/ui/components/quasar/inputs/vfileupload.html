@@ -1,6 +1,6 @@
 <th:block th:fragment="v-fileupload-edit(url, downloadUrl, key, object, field, multiple, simple, uploader_attrs)" 
 	vu:alias="v-fileupload" vu:selector="${viewMode=='edit'}"
-	th:assert="(${key} != null or (${object} != null and ${field} != null)) and ${url} != null"
+	th:assert="((${key} != null and ${label} != null) or (${object} != null and ${field} != null)) and ${url} != null"
 	th:with="object=${object?:key}, myComponentId=${model.util.generateComponentUID('uploader', object, field, rowIndex)}, downloadUrl=${downloadUrl?:(url + '/download/')}, myMultiple=${multiple?:false}, mySimple=${simple?:false}" >
 		<vu:include-data-primitive key="${object}" th:if="${field==null}" modifiable="true" />
         <vu:include-data object="${object}" field="${field}" th:if="${field!=null}" modifiable="true"/>

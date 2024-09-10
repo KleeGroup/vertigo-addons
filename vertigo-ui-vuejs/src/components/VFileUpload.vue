@@ -97,10 +97,10 @@ export default {
   data : function() {
       return {
           files:[],
-          units: [this.i18n('uploader.unit_b'),
-                  this.i18n('uploader.unit_kb'),
-                  this.i18n('uploader.unit_mb'),
-                  this.i18n('uploader.unit_gb')]
+          units: [i18n('uploader.unit_b'),
+                  i18n('uploader.unit_kb'),
+                  i18n('uploader.unit_mb'),
+                  i18n('uploader.unit_gb')]
       }
   },
   methods: {
@@ -224,6 +224,10 @@ function doUploadfile(vFile) {
                 vFile.errorMessage = this.i18n('uploader.fileErrorTooBig');
             }
         }.bind(this));
+}
+
+function i18n(key) {
+    return VertigoUi.methods.i18n(key);
 }
 
 </script>
